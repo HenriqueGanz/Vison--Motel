@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vison Motel</title>
+
+    <!--Links, fonts, CSS & Bootstrap-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!--Scripts-->
+    <script defer src="./main.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-transparent hidden">
+        <div class="container-fluid justify-content-between align-items-center p-4">
+          <a class="navbar-brand logo-config logo-config-desktop-show" href="#">
+            <figure id="logo" class="d-flex flex-column">
+              <img src="../Assets/motel.svg" alt="Parte superior da logo, escrito MOTEL">
+              <img src="../Assets/vison.svg" alt="Parte inferior da logo, escrito VISON">
+            </figure>
+          </a>
+          <button type="button" class="reservas-config reservasBtn-config-mobile" data-bs-toggle="modal" data-bs-target="#reservaModal">
+            Reservas
+          </button>
+          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon navbar-toggler-icon-config"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand logo-config logo-config-mobile-hidden" href="#">
+              <figure id="logo" class="d-flex flex-column">
+                <img src="../Assets/motel.svg" alt="Parte superior da logo, escrito MOTEL">
+                <img src="../Assets/vison.svg" alt="Parte inferior da logo, escrito VISON">
+              </figure>
+            </a>
+            <ul class="navbar-nav nav-config m-auto mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Suites</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white text-nowrap" href="#">O Motel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Cortesias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">localização</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contato</a>
+              </li>
+            </ul>
+            <div class="d-flex" role="reserve">
+              <aside class="reservasBtn-config">
+                <button type="button" class="reservas-config" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservas</button>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+        <section class="bg-inicio vh-100 d-flex justify-content-center align-items-center">
+          <article class="container d-flex flex-column align-items-center hidden">
+            <div class="row">
+              <div class="col-md-12 menu-text-config text-center text-light">
+                <h2 class="title1-config">Bem vindo ao</h2>
+                <h1 class="title2-config">Vison Motel</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 d-flex">
+                <button class="showSuites-config text-white">Ver suites</button>
+                <button type="button" class="reservas2-config text-white" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservas</button>
+              </div>
+            </div>
+          </div>
+          </article>
+        </section>
+
+        <section class="nossas-suites vh-100 bg-suites">
+          <article>
+            <h1 class="title-suites text-light text-center hidden"> Nossas suítes </h1>
+            <div class="carousel-container hidden">
+                <div id="carousel" class="carousel carousel-dark slide">
+                  <div class="carousel-inner image-size pt-0">
+                      <div class="carousel-item active image1">
+                        <div class="row position-absolute top-100 start-50 translate-middle z-2 justify-content-center align-items-center">
+                          <aside class="col-sm-7 text-center">
+                            <h3 class="legend-title-config">Suíte Cristal</h3>
+                            <legend class="legend-subtitle-config text-nowrap">A partir de R$ 164,00</legend>
+                          </aside>
+                          <aside class="col-sm-3 saibaMais-carousel-mobile-btn-config">
+                              <button class="saibaMais-btn border-0 text-light">Saiba mais</button>
+                          </aside>
+                        </div>
+                      </div>
+                      <div class="carousel-item image2">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                      </div>
+                      <div class="carousel-item image3">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                      </div>
+                  </div>
+                  <!-- fundo branco para as legendas se encaixarem ao passar slide -->
+                  <div class="container legend-container position-absolute start-50 translate-middle bg-white">
+                  </div>
+                  <button class="carousel-control-prev d-flex justify-content-start" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-black carousel-buttons-size" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next d-flex justify-content-end" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-black carousel-buttons-size" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+            </div>
+            <div class="link d-flex justify-content-center hidden">
+              <a class="suites-link-config text-light">Ver todas as suítes</a>
+            </div>
+          </article>
+        </section>
+
+        <section class="bg-sobre d-flex align-items-center">
+          <div class="container">
+            <div class="row flex-row-reverse d-flex align-items-end m-5 sobre-mobile-config">
+              <div class="col-md-6 p-0 hidden sobreImg-config-mobile-adjust">
+                <img src="../Assets/motel.png" class="img-fluid sobreImg-config-mobile">
+              </div>
+              <div class="col-md-6 bg-white d-flex flex-column justify-content-center hidden adjust-content-motel">
+                <article class="d-flex justify-content-center flex-column align-items-start">
+                  <h1 class="sobre-title hidden">O Motel</h1>
+                  <p class="sobre-text hidden">O Vison Motel está localizado na Zona Industrial Norte, em Joinville e conta com ambientes exclusivos e privativos,
+                    basta escolher a suíte que mais combina com você.</p>
+                  <p class="sobre-text hidden">Todos os quartos são equipados com TV, ar-condicionado, ducha, frigobar e garagem privativa, enquanto outras opções</p>
+                  <p class="sobre-text hidden">vão além: oferecem hidromassagem, pole dance, x sado e no caso da Suíte Erótika, até mesmo uma jaula ao redor da cama.</p>
+                  <p class="sobre-text hidden">Hospede-se e aproveite ainda nosso delicioso café da manhã, servido todos os dias para pernoites!</p>
+                </article>
+                <button class="text-light saibaMais-btn border-0 mt-5 hidden ">Saiba mais</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-cortesias">
+          <h1 class="text-light text-center cortesias-title-config hidden">Cortesias</h1>
+          <div class="card-margin-mobile">
+              <article class="container">
+                <div class="row d-flex justify-content-center gap-3 hidden">
+                    <div class="card border-0 card-config card-config p-0 col-12 col-md-3">
+                        <img src="../Assets/breakFast.png" class="img-fluid" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Café da Manhã</h2>
+                            <p class="card-text text-center ">Servido todos os dias entre 6h e 10h, somente para o pernoite.</p>
+                        </div>
+                    </div>
+                    <div class="card border-0 card-config card-config-mobile p-0 col-12 col-md-3">
+                        <img src="../Assets/aniversarySpecial.png" class="img-fluid" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Especial para Aniversariantes</h2>
+                            <p class="card-text text-center">A equipe do Vison Motel quer tornar o seu aniversário ainda mais especial!</p>
+                        </div>
+                    </div>
+                    <div class="card border-0  card-config  card-config-mobile p-0 col-12 col-md-3">
+                        <img src="../Assets/discount.png" class="img-fluid" alt="...">
+                        <div class="card-body">
+                            <h2 class="card-title text-center">Descontos</h2>
+                            <p class="card-text text-center">Economize se hospedando com desconto no Motel Vison!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center hidden">
+                  <button class="cortesias-btn text-light border-0">Ver todas as cortesias</button>
+                </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="bg-localizacao-config">
+          <article class="container">
+            <div class="row g-0 localizacao-config">
+              <aside class="col-12 col-md-6 hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.795868368155!2d-48.82916517028774!3d-26.23582151859926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deae5902412fa7%3A0xedb78df10af4fd08!2sMotel%20Vison!5e0!3m2!1spt-BR!2sbr!4v1675020799551!5m2!1spt-BR!2sbr"
+                  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  class="img-fluid map-size"></iframe>
+              </aside>
+              <aside class="col-12 col-md-6 d-flex flex-column bg-white justify-content-center align-items-center hidden">
+                <div class="text-center bg-white localizacao-text-config">
+                  <h3 class="localizacao-title ">Localização</h3>
+                  <p class="localizacao-text">
+                    Avenida Santos Dumont, 5253
+                    <br>
+                    Zona Industrial Norte - Joinville - SC
+                  </p>
+                  <button class="rota-btn text-white border-0 ">Traçar rota</button>
+                </div>
+              </aside>
+            </div>
+          </article>
+        </section>
+    </main>
+
+    <footer class="bg-footer-config">
+      <section class="desktop-config-hide">
+        <article class="footer-padding-config">
+          <article class="container">
+            <div class="row justify-content-center align-items-center">
+              <aside class="col-md-3 hidden">
+                <figure id="logo" class="d-flex justify-content-center flex-column footer-logo-config">
+                  <img src="../Assets/motel.svg" alt="Parte superior da logo, escrito MOTEL">
+                  <img src="../Assets/vison.svg" alt="Parte inferior da logo, escrito VISON">
+                </figure>
+              </aside>
+              <aside class="col-md-3 d-flex flex-column text-white footer-text-style hidden">
+                <a>Inicio</a>
+                <a>Suites</a>
+                <a>O Motel</a>
+              </aside>
+              <aside class="col-md-3 d-flex flex-column text-white footer-text-style hidden">
+                <a>Gastronomia</a>
+                <a>Localizacao</a>
+                <a>Reservas</a>
+              </aside>
+              <aside class="col-md-3 d-flex flex-column text-white footer-text-style footer-contact-style hidden">
+                <a><span class="footer-span-style d-flex">Whatsapp:</span>(061) 3552-2297</a>
+                <a><span class="footer-span-style d-flex">E-mail</span>contato@motelvison.com</a>
+              </aside>
+            </div>
+            <div class="row endereco-padding hidden">
+              <p class="text-white footer-text-style">Rua SPMS, Conj./Lote 175/225 - Núcleo<br>Bandeirante - Brasília - DF</p>
+            </div>
+          </article>
+        </article>
+        <article class="text-white bg-black d-flex justify-content-center">
+          <p class="footer-span-style m-0 hidden">GUIA DE MOTÉIS SITES | GUIA DE MOTÉIS &copy;</p>
+        </article>
+      </section>
+      <section class="mobile-config-show">
+          <article class="d-flex justify-content-center">
+            <div class="container">
+              <figure id="logo" class="footer-logo-config-mobile d-flex justify-content-center flex-column border-bottom m-0">
+                <img src="../Assets/motel.svg" class="logo-config-footer" alt="Parte superior da logo, escrito MOTEL">
+                <img src="../Assets/vison.svg" class="logo-config-footer mb-5" alt="Parte inferior da logo, escrito VISON">
+              </figure>
+              <div class="row d-flex flex-column gap-4 ms-auto me-auto">
+                <button type="button" class="reservas2-config-mobile text-white" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservas</button>
+                <button class="showSuites-config-mobile text-white">Ver suites</button>
+                <button class="btn footer-btn text-white">Whatsapp</button>
+                <button class="btn footer-btn text-white">contato</button>
+              </div>
+            </div>
+          </article>
+      </section>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="reservaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="reservaModal">Faça sua reserva agora!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="termos">
+                          <p class="fs-4"><span class="fs-3">1. </span>Preencha o formulário de Pedido de Reserva abaixo.</p>
+                          <p class="fs-4"><span class="fs-3">2. </span>Será enviado para o seu e-mail um número de pré reserva e as formas para efetuar o pagamento.</p>
+                          <p class="fs-4"><span class="fs-3">3. </span>Faça o deposito identificado ou transferência identificada com o número da pré reserva. Ou entre em contato com a nossa recepção para pagamento via cartão.</p>
+                          <p class="fs-4"><span class="fs-3">4. </span>Após a confirmação do pagamento, será enviado um e-mail com a confirmação da reserva.</p>
+                          <p class="fs-4"><span class="fs-3">5. </span> A reserva só se tornará efetivada mediante pagamento confirmado, podendo levar até 2 dias úteis.</p>
+                      </div>
+                      <div class="mb-3">
+                        <label for="name" class="form-label fs-2" >Nome</label>
+                        <input type="text" class="form-control" id="name" placeholder="Nome completo" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="Email" class="form-label fs-2">Endereço de e-mail</label>
+                        <input type="email" class="form-control" id="Email" placeholder="seuemail@email.com" required>
+                      </div>
+                      <div class="mb-3">
+                          <label for="fone" class="form-label fs-2">Telefone</label>
+                          <input type="tel" class="form-control" id="fone" required placeholder="(xx) xxxxx-xxxx">
+                        </div>
+                      <div class="mb-3">
+                        <label for="suite" class="form-label fs-2">Suíte desejada</label>
+                        <input type="text" class="form-control" id="suite" placeholder="Nome da suite desejada" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="date" class="form-label fs-2">Data de entrada</label>
+                        <input type="date" class="form-control" id="date" required>
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="check">
+                        <label class="form-check-label fs-3" for="check" required>Aceito os termos de procedimento</label>
+                      </div>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+</html>

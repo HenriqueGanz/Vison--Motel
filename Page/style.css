@@ -1,0 +1,640 @@
+/* Reset simples e root com variaveis e configuracao rem */
+* {
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary:'Playfair Display', serif;
+    --ff-secondary:'Montserrat', sans-serif;
+
+    --fc-dark: #2A2A2A;
+    --fc-light: #FFFFFF;
+
+    --bg-1: #7A7266;
+    --bg-2: #EEEEEE;
+    --bg-3: #6C6359;
+    --bg-4: #2A2A2A;
+
+    --btn-color-primary: #7A7266;
+    --btn-color-secondary: #5A493E;
+    --btn-color-terciary: #2A2A2A;
+}
+
+body {
+    background-color: var(--bg-2);
+}
+/* --------------------------------- */
+
+header {
+    position: fixed;
+    z-index: 3;
+    bottom: top;
+    width: 100%;
+}
+
+.nav-config {
+    font-family: var(--ff-secondary);
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin: 3.3rem auto;
+    gap: 4.8rem;
+}
+
+.logo-config {
+    margin: 2.1rem 0 0 7rem;
+}
+
+.reservasBtn-config-mobile {
+    display: none;
+}
+
+.logo-config-desktop-show {
+    display: none;
+}
+
+/* Configuracoes especiais do menu inicial */
+
+.bg-inicio {
+    background: url('../Assets/suiteCristal1.png') center/cover no-repeat ;
+}
+
+.menu-text-config {
+    margin-bottom: 1rem;
+}
+
+.title1-config {
+    font-family: var(--ff-secondary);
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+}
+
+.title2-config {
+    font-family: var(--ff-primary);
+    font-size: 6.7rem;
+    line-height: 8.9rem;
+}
+
+.showSuites-config {
+    margin-right: .8rem;
+    font-family: var(--ff-secondary);
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    border:none;
+    width: 16rem;
+    height: 4.1rem;
+
+    background-color: var(--btn-color-primary);
+}
+
+.reservas2-config {
+    margin-left: .8rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-family: var(--ff-secondary);
+
+    border:none;
+    background-color: var(--btn-color-secondary);
+    width: 16rem;
+    height: 4.1rem;
+}
+
+/* --------------------------------- */
+
+/* Configuracoes especiais para sessao do carrosel */
+
+.bg-suites {
+    background: var(--bg-1);
+}
+
+.title-suites {
+    font-family: var(--ff-primary);
+    font-size: 3.4rem;
+    line-height: 4.5rem;
+
+    padding: 8rem 0 3.2rem 0;
+}
+
+.image1 {
+    background: url(../Assets/suiteCristal1.png) center/cover no-repeat;
+    height: 100%;
+}
+
+.image2 {
+    background: url(../Assets/suiteCristal2.png) center/cover no-repeat;
+    height: 100%;
+}
+
+.image3 {
+    background: url(../Assets/breakFast.png) center/cover no-repeat;
+    height: 100%;
+}
+
+.image-size {
+    height: 44rem;
+    padding-bottom: 5rem;
+}
+
+.carousel-inner {
+    padding-top: 0;
+}
+
+.carousel-container {
+    max-width: 79rem;
+    margin:0 auto;
+}
+
+.carousel-buttons-size {
+    width:4rem;
+    height:6.2rem;
+}
+
+.carousel-caption {
+    position: relative;
+    bottom:0;
+}
+
+.legend-container {
+    max-width: 34.2rem;
+    height: 12.8rem;
+    top: 90%;
+}
+
+.saibaMais-btn {
+    font-family: var(--ff-secondary);
+    font-size: 1.4rem;
+    background: var(--btn-color-secondary);
+    width: 10.9rem;
+    min-height: 4.1rem;
+    padding: 1.2rem;
+}
+
+.legend-title-config {
+    font-family: var(--ff-primary);
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    color: var(--fc-dark);
+}
+
+.legend-subtitle-config {
+    font-family: var(--ff-secondary);
+    color: var(--fc-dark);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 150%;
+
+}
+
+.suites-link-config {
+    margin-top: 8.8rem;
+    font-size: 1.4rem;
+    font-family: var(--ff-secondary);
+    line-height: 1.7rem;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Configuracoes especiais da sessao Sobre */
+
+.bg-sobre {
+    background: var(--bg-2);
+}
+
+.sobre-title {
+    font-family: var(--ff-primary);
+    font-size: 3.4rem;
+    line-height: 4.53rem;
+}
+
+.sobre-text {
+    font-family: var(--ff-secondary);
+    color: var(--fc-dark);
+    font-size: 1.4rem;
+    line-height: 2.24rem;
+}
+
+.adjust-content-motel {
+    height: 50rem;
+    padding: 13rem 3.2rem;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Configuracoes especiais da sessao cortesias */
+
+.bg-cortesias {
+    background: var(--bg-3);
+}
+
+.cortesias-title-config {
+    font-family: var(--ff-primary);
+    font-size: 3.4rem;
+    line-height: 4.53rem;
+    padding: 6.4rem 0 3.2rem;
+}
+
+.card-config {
+    width:36.8rem;
+    border-radius: 0;
+}
+
+.card-title {
+    font-family: var(--ff-primary);
+    font-size: 2.2rem;
+    line-height: 2.93rem;
+    color: var(--fc-dark);
+    padding-top: 3.2rem;
+}
+
+.card-text {
+    font-family: var(--ff-secondary);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--fc-dark);
+    line-height: 2.24rem;
+    padding: .8rem 3.2rem 4rem;
+}
+
+.cortesias-btn {
+    width: 18.5rem;
+    height: 4.1rem;
+    background-color: var(--bg-4);
+
+    font-family: var(--ff-secondary);
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+
+    margin: 3.2rem 0 6.4rem 0;
+}
+
+/* --------------------------------------------------------------- */
+/* Configuracoes especiais da sessao localizacao */
+
+.bg-localizacao-config {
+    background: var(--bg-2);
+    margin: 0 auto;
+    padding: 8rem 0;
+}
+
+.map-size {
+    width: 100%;
+    height: 31.2rem;
+}
+
+.localizacao-config {
+    height: 29rem;
+}
+
+.localizacao-title {
+    font-family: var(--ff-primary);
+    font-size: 3.4rem;
+    line-height: 4.53rem;
+    color: var(--fc-dark);
+}
+
+.localizacao-text {
+    font-size: 1.4rem;
+    line-height: 2.24rem;
+    font-family: var(--ff-secondary);
+    color: var(--fc-dark);
+    margin: 1.6rem;
+}
+
+.rota-btn {
+    font-weight: var(--ff-secondary);
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+
+    background: var(--btn-color-secondary);
+    width: 10.9rem;
+    height: 4.1rem;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------- */
+/* Configuracoes especiais do footer */
+
+.bg-footer-config {
+    background: var(--bg-4);
+}
+
+.footer-logo-config {
+    max-width: 18.9rem;
+    height: 3.74rem;
+}
+
+.footer-text-style {
+    font-family: var(--ff-secondary);
+    font-size: 1.4rem;
+    line-height: 2.24rem;
+    gap: 1.6rem;
+}
+
+.footer-contact-style {
+    gap: 2.4rem;
+}
+
+.footer-span-style {
+    font-family: var(--ff-secondary);
+    font-size: 1.1rem;
+    line-height: 1.92rem;
+    padding: 1.2rem 0;
+}
+
+.footer-padding-config {
+    padding: 6.4rem 0 7.1rem;
+}
+
+.endereco-padding {
+    padding-top: 3.2rem;
+}
+
+.black-footer-config {
+    width: 100%;
+}
+
+.mobile-config-show {
+    display: none;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Reservas config */
+
+.reservas-config {
+    font-family: var(--ff-secondary);
+    color: var(--fc-dark);
+    font-size:1.4rem;
+    line-height: 150%;
+
+    padding: 1.2rem 1.6rem;
+    background-color: var(--bg-2);
+    border:none;
+}
+
+.reservasBtn-config {
+    margin:2.1rem 7rem 0 0;
+}
+
+
+/* JS Animations */
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+    
+.show {
+    opacity: 1;
+    animation: slide .6s ease-in;
+}
+
+@keyframes slide {
+    from{
+        transform:translateY(-30px);
+    }
+    
+    to{
+        transform: translateY(0);
+    }
+}
+
+/* mobile especial configs */
+@media (max-width:768px) {
+
+    /* header e nav config */
+
+    header {
+        background: var(--bg-4);
+        position: fixed;
+        z-index: 2;
+        bottom: 0;
+        width: 100%;
+    }
+
+    nav section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+
+    .navbar-toggler-mobile {
+        border: none;
+        color: #FFFFFF;
+    }
+
+    .navbar-toggler-icon-config {
+        width: 2.8rem;
+        height: 3rem;
+        background:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    }
+
+    .navbar-brand, .logo-config {
+        padding: 0;
+        margin: 0;
+    }
+
+    .logo-config-mobile-hidden {
+        display: none;
+    }
+
+    .logo-config-desktop-show {
+        display:inline;
+        width: 8.3rem;
+        height: 1.64rem;
+        padding-bottom: 3.2rem;
+    }
+
+    .reservasBtn-config {
+        display: none;
+    }
+
+    .reservasBtn-config-mobile {
+        display: flex;
+    }
+
+    /*menu config*/
+
+    .title1-config {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+
+    .title2-config {
+        font-size:5.3rem;
+        line-height: 7.1rem;
+    }
+
+    .reservasBtn-config {
+        margin: 0;
+        padding: 0;
+    }
+
+    .reservas-config {
+        background-color: var(--bg-1);
+        color: var(--fc-light);
+    }
+
+    .reservas2-config, .showSuites-config {
+        width: 12rem;
+    }
+
+    /* carrosel */
+
+    .carousel-container {
+        margin:0 2.4rem;
+    }
+
+    .saibaMais-carousel-mobile-btn-config{
+        display:flex;
+        justify-content: center;
+    }
+
+    .legend-container {
+        width: 24rem;
+        height: 19.5rem;
+    }
+
+    .image-size {
+        max-width: 31rem;
+        padding: 6rem 0;
+    }
+
+    /* Sessao Sobre */
+
+    .sobre-mobile-config {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .adjust-content-motel {
+        width: 31.2rem;
+        height: 69.6rem;
+        margin: 29.6rem auto 0;
+        padding: 2rem;
+        z-index: 1;
+    }
+
+    .sobre-mobile-config {
+        padding-bottom: 6.4rem;
+    }
+
+    .sobreImg-config-mobile {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 31.2rem;
+
+    }
+
+    .sobreImg-config-mobile-adjust {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Sessao Cortesias */
+
+    .card-margin-mobile {
+        margin: 0 2.4rem;
+    }
+
+    .card-title {
+        padding:0;
+    }
+
+    .card-text {
+        padding-bottom: 0;
+    }
+
+
+    /* Sessao localizacao */
+
+    .bg-localizacao-config {
+        background: var(--bg-2);
+        height: 60rem;
+        margin: 6.4rem auto;
+        padding: 0;
+    }
+
+    .rota-btn {
+        width: 12.5rem;
+        height: 4.9rem;
+    }
+
+    .localizacao-text-config {
+        width: 31.2rem;
+        height: 23.4rem;
+    }
+
+
+    /* footer configs */
+
+    .desktop-config-hide {
+        display: none;
+    }
+
+    .mobile-config-show {
+        display: flex;
+        justify-content: center;
+        padding: 4.8rem 3.2rem;
+        height: 511.3px;
+    }
+
+    .footer-logo-config-mobile {
+        width: 29.6rem;
+    }
+
+    .logo-config-footer {
+        width: 187.44px;
+        height: 38.95px;
+        margin: 0 auto;
+    }
+
+    .showSuites-config-mobile {
+        background-color: var(--btn-color-primary);
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        width: 29.6rem;
+        height: 5.3rem;
+    
+    }
+    
+    .reservas2-config-mobile {
+        background-color: var(--btn-color-primary);
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        
+        margin:3.2rem 0 0 0;
+        width: 29.6rem;
+        height: 5.3rem;
+    }
+
+    .footer-btn {
+        font-family: var(--ff-secondary);
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        width: 29.6rem;
+        height: 5.3rem;
+        border: solid #FFFFFF 1px;
+        border-radius: 0;
+    }
+
+    
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+
