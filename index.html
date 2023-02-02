@@ -25,8 +25,8 @@
 <body>
 
     <header class="z-3">
-      <nav id="barraDeNavegacao"class="navbar navbar-expand-lg bg-transparent hidden">
-        <div class="container-fluid justify-content-between align-items-center p-4">
+      <nav id="barraDeNavegacao"class="navbar navbar-expand-lg">
+        <div class="container-fluid justify-content-between align-items-center p-4 hidden">
           <a id="logoClicavel"class="navbar-brand logo-config logo-config-desktop-show" href="#">
             <figure id="logo" class="d-flex flex-column">
               <img src="../Assets/motel.svg" alt="Parte superior da logo, escrito MOTEL">
@@ -40,13 +40,13 @@
             <span class="navbar-toggler-icon navbar-toggler-icon-config"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a id="logoMobile" class="navbar-brand logo-config logo-config-mobile-hidden" href="#">
+            <a id="logoMobile" class="navbar-brand logo-config logo-config-mobile" href="#">
               <figure id="logo" class="d-flex flex-column">
                 <img src="../Assets/motel.svg" alt="Parte superior da logo, escrito MOTEL">
                 <img src="../Assets/vison.svg" alt="Parte inferior da logo, escrito VISON">
               </figure>
             </a>
-            <ul class="navbar-nav nav-config m-auto mb-lg-0 d-flex align-items-end">
+            <ul class="navbar-nav nav-config mb-lg-0 d-flex">
               <li class="nav-item">
                 <a class="nav-link active text-light" aria-current="page" href="#sessaoInicial">Início</a>
               </li>
@@ -67,7 +67,7 @@
               </li>
             </ul>
             <div id="botaoReservasMobile" class="d-flex" role="reserve">
-              <aside class="reservasBtn-config">
+              <aside>
                 <button type="button" class="reservas-config" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservas</button>
               </aside>
             </div>
@@ -86,8 +86,8 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 d-flex">
-                <a href="#sessaoCarousel" class="text-decoration-none p-0 m-0"><button class="showSuites-config text-white">Ver suites</button></a>
+              <div class="col-md-12 d-flex p-0 m-0">
+                <a href="#sessaoCarousel" class="text-decoration-none"><button class="showSuites-config text-white">Ver suites</button></a>
                 <button type="button" class="reservas2-config text-white" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservas</button>
               </div>
             </div>
@@ -102,44 +102,27 @@
                 <div id="carousel" class="carousel carousel-dark slide">
                   <div class="carousel-inner image-size pt-0">
                     <div class="carousel-item active image1">
-                      <div class="row position-absolute top-100 start-50 translate-middle z-2 justify-content-center align-items-center">
-                        <!-- As legendas sao dinamicas e rolam junto com a imagem, porem a box branca e fixa no local -->
-                        <aside class="col-sm-7 text-center">
-                          <h3 class="legend-title-config">Suíte Cristal</h3>
-                          <legend class="legend-subtitle-config text-nowrap">A partir de R$ 164,00</legend>
-                        </aside>
-                        <aside class="col-sm-3 saibaMais-carousel-mobile-btn-config">
-                          <button class="saibaMais-btn border-0 text-light">Saiba mais</button>
-                        </aside>
-                      </div>
                     </div>
                     <div class="carousel-item image2">
                       <div class="row position-absolute top-100 start-50 translate-middle z-2 justify-content-center align-items-center">
-                        <!-- legenda exemplo igual a mostrada no figma -->
-                        <aside class="col-sm-7 text-center">
-                          <h3 class="legend-title-config">Suíte Cristal</h3>
-                          <legend class="legend-subtitle-config text-nowrap">A partir de R$ 164,00</legend>
-                        </aside>
-                        <aside class="col-sm-3 saibaMais-carousel-mobile-btn-config">
-                          <button class="saibaMais-btn border-0 text-light">Saiba mais</button>
-                        </aside>
                       </div>
                     </div>
                     <div class="carousel-item image3">
                       <div class="row position-absolute top-100 start-50 translate-middle z-2 justify-content-center align-items-center">
-                        <!-- legenda exemplo igual a mostrada no figma -->
-                        <aside class="col-sm-7 text-center">
-                          <h3 class="legend-title-config">Suíte Cristal</h3>
-                          <legend class="legend-subtitle-config text-nowrap">A partir de R$ 164,00</legend>
-                        </aside>
-                        <aside class="col-sm-3 saibaMais-carousel-mobile-btn-config">
-                          <button class="saibaMais-btn border-0 text-light">Saiba mais</button>
-                        </aside>
                       </div>
                     </div>
                   </div>
-                  <!-- box branca para as legendas se encaixarem ao passar slide -->
-                  <div class="container legend-container position-absolute start-50 translate-middle bg-white">
+                  <!-- box branca para a legenda -->
+                  <div class="container d-flex align-items-center justify-content-center legend-container position-absolute start-50 translate-middle bg-white">
+                    <div class="row">
+                      <aside class="col-sm-7 text-center">
+                        <h3 class="legend-title-config">Suíte Cristal</h3>
+                        <legend class="legend-subtitle-config text-nowrap">A partir de R$ 164,00</legend>
+                      </aside>
+                      <aside class="col-sm-3 saibaMais-carousel-mobile-btn-config">
+                        <button class="saibaMais-btn border-0 text-light">Saiba mais</button>
+                      </aside>
+                    </div>
                   </div>
                   <button class="carousel-control-prev d-flex justify-content-start" type="button" data-bs-target="#carousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon bg-black carousel-buttons-size" aria-hidden="true"></span>
@@ -302,7 +285,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="reservaModal">Faça sua reserva agora!</h1>
+            <h1 class="modal-title" id="reservaModal">Faça sua reserva agora!</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -334,10 +317,6 @@
                 <label for="date" class="form-label fs-2">Data de entrada</label>
                 <input type="date" class="form-control" id="date" required>
               </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="check">
-                <label class="form-check-label fs-3" for="check" required>Aceito os termos de procedimento</label>
-              </div>
             </form>
           </div>
           <div class="modal-footer">
@@ -352,7 +331,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="contatoModal">Entre em contato conosco.</h1>
+            <h1 class="modal-title" id="contatoModal">Entre em contato conosco.</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -381,6 +360,6 @@
         </div>
       </div>
     </div>
-    
+
 </body>
 </html>

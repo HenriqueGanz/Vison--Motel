@@ -34,7 +34,7 @@ body {
 
 /* Configuracoes Especiais do menu de navegacao */
 header {
-    position: fixed;
+    position:absolute;
     z-index: 3;
     bottom: top;
     width: 100%;
@@ -44,7 +44,7 @@ header {
     font-family: var(--ff-secondary);
     font-size: 1.6rem;
     line-height: 150%;
-    margin: 3.3rem auto;
+    margin: 1rem auto;
     gap: 4.8rem;
 }
 
@@ -173,7 +173,7 @@ header {
     font-size: 1.4rem;
     background: var(--btn-color-secondary);
     width: 10.9rem;
-    min-height: 4.1rem;
+    height: 4.1rem;
     padding: 1.2rem;
 }
 
@@ -373,11 +373,11 @@ header {
     padding: 1.2rem 1.6rem;
     background-color: var(--bg-2);
     border:none;
+
+    margin: 0 7rem 0 0;
+
 }
 
-.reservasBtn-config {
-    margin:2.1rem 7rem 0 0;
-}
 /* --------------------------------- */
 
 /* JS Animations */
@@ -386,14 +386,14 @@ header {
     transition: all 1s;
 }
     
-.show {
+.show-animate {
     opacity: 1;
     animation: slide .6s ease-in;
 }
 
 @keyframes slide {
     from{
-        transform:translateY(-30px);
+        transform:translateY(-25px);
     }
     
     to{
@@ -402,6 +402,37 @@ header {
 }
 /* --------------------------------- */
 
+/* Modal configs */
+input {
+    height: 5rem;
+}
+
+textarea {
+    max-height: 10rem;
+}
+
+textarea::-webkit-input-placeholder {
+    font-size: 1.6rem;
+}
+
+input[type="date"] {
+    font-size: 1.6rem;
+}
+
+input::-webkit-input-placeholder {
+    font-size:1.6rem;
+  }
+
+.modal-footer button {
+    font-size: 1.6rem;
+    width: 10rem;
+    height: 4rem;
+}
+
+.modal-header h1 {
+    font-size: 2rem;
+}
+/* --------------------------------- */
 /* mobile especial configs */
 @media (max-width:768px) {
 
@@ -437,7 +468,7 @@ header {
         margin: 0;
     }
 
-    .logo-config-mobile-hidden {
+    .logo-config-mobile {
         display: none;
     }
 
@@ -468,19 +499,17 @@ header {
         line-height: 7.1rem;
     }
 
-    .reservasBtn-config {
-        margin: 0;
-        padding: 0;
-    }
-
     .reservas-config {
         background-color: var(--bg-1);
         color: var(--fc-light);
+        margin: 0;
     }
 
     .reservas2-config, .showSuites-config {
-        width: 12rem;
+        max-width: 14rem;
+        height: 4.9rem;
     }
+
     /* --------------------------------- */
 
     /* carrosel especial config */
@@ -491,6 +520,7 @@ header {
     .saibaMais-carousel-mobile-btn-config{
         display:flex;
         justify-content: center;
+        margin: 2.4rem 0 0;
     }
 
     .legend-container {
@@ -516,7 +546,7 @@ header {
     .adjust-content-motel {
         width: 31.2rem;
         height: 69.6rem;
-        margin: 29.6rem auto 0;
+        margin: 27.6rem auto 0;
         padding: 2rem;
         z-index: 1;
     }
@@ -630,7 +660,7 @@ header {
 
     .black-footer-config-mobile {
         margin-bottom: 8.2rem;
-        height: 10.6rem;
+        height: 4.6rem;
     }
     /* --------------------------------- */
     
